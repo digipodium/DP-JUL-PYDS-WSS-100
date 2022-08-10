@@ -3,7 +3,6 @@ win_count = 0
 lose_count = 0
 
 dice = ['1️⃣','2️⃣','3️⃣','4️⃣','5️⃣','6️⃣']
-
 while True:
     input("Press enter to 🎲Roll Dice")
     out = randint(1,6)
