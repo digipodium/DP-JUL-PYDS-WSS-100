@@ -1,4 +1,5 @@
 from dputils import scrape
+import pandas as pd
 
 # step 1. get the data as soup obj
 # step 2. create the setup dictionaries (most important)
@@ -33,7 +34,5 @@ def getdata(q):
 
 
 # use
-laptops = getdata('mobile')
-
-from pprint import pprint
-pprint(laptops)
+laptops = getdata('laptops')
+pd.DataFrame(laptops).to_csv('laptop_data.csv')
