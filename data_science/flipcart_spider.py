@@ -35,4 +35,4 @@ def getdata(q):
 
 # use
 laptops = getdata('laptops')
-pd.DataFrame(laptops).to_csv('laptop_data.csv')
+pd.DataFrame(laptops).to_csv('laptop_data2.csv')
