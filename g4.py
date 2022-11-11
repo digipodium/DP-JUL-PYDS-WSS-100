@@ -7,8 +7,8 @@ WIDTH = 1000
 ps = 3 # player speed
 es = 1 # enemy speed
 
-game_over = False  # switch
-game_started = False # switch
+game_over = False  # switch to check if game is over
+game_started = False # switch to check game is started or not
 
 center = (WIDTH//2, HEIGHT//2) # points to center coordinates of screen
 
@@ -16,17 +16,20 @@ bg = Actor('bg', center=(0,0))
 p = Actor('ironman', pos=(100,100))
 e = Actor('zombie', pos=(700,100))
 
+# startin screen
 def show_screen_1():
     bg.draw()
     screen.draw.text('Our Game', center=center, fontsize=100, color='white')
     screen.draw.text('press Space to start', center = (center[0], center[1]+100), 
                     fontsize=50, color='white')
 
+# game screen
 def show_game_screen():
     bg.draw()
     p.draw()
     e.draw()
 
+# game over screen
 def show_game_over():
     bg.draw()
     screen.draw.text('Game Over', center=center, fontsize=100, color='white')
